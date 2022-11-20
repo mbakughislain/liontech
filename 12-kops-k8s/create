@@ -1,0 +1,7 @@
+#!/bin/bash
+
+kops create cluster --name liontech.k8s.local  --zones ca-central-1b --networking weave --master-size t2.large --master-count 1 --node-size t2.large --node-count=3 
+kops create secret --name liontech.k8s.local sshpublickey admin -i ~/.ssh/id_rsa.pub
+#update the cluster 
+kops update cluster --name liontech.k8s.local --yes
+kops get cluster

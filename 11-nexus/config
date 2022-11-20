@@ -1,0 +1,20 @@
+As part of the configurations, 
+manually access the following files: 
+
+vi /opt/nexus/bin/nexus.rc
+
+run_as_user="nexus"
+
+##switch users to nexus 
+#7 CONFIGURE NEXUS TO RUN AS A SERVICE 
+
+sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
+
+#9 Enable and start the nexus services
+
+ service nexus start 
+ service nexus stop
+ service nexus status 
+echo "end of nexus installation"
+
+=====================

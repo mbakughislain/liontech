@@ -1,0 +1,5 @@
+#!/bin/bash
+
+  #  create the cluster : 
+   export KOPS_STATE_STORE=s3://k8s-liontech-k8s-bucket
+   kops update cluster --name liontech.k8s.local --yes
